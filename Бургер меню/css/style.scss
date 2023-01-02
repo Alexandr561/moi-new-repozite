@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Charis+SIL:regular,italic,700,700italic);
+body {
+    font-family: "Charis SIL", sans-serif;
+    background-color: rgb(14, 14, 13);
+    &.__lock {
+        overflow: hidden;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+// основные СТИЛИ___________________________________________
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: 100px;
+}
+
+.menu__icon {
+display: block;
+width: 30px;
+height: 18px;
+position: relative;
+z-index: 5;
+cursor: pointer;
+span {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all .5s;
+    &:first-child {
+        top: 0;
+        transform: translateY(0);
+    }
+    &:last-child {
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+    }
+ }
+&.active {
+    span {
+transform: scale(0);
+&:first-child {
+    transform: rotate(-45deg);
+    top: calc(50% - 1px);
+}
+&:last-child {
+  transform: rotate(45deg);
+  bottom: calc(50% - 1px);
+}
+    }
+}
+}
+
+.menu {
+
+}
+
+.menu__body {
+@media (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    transition: all .5s;
+}
+&.active {
+    left: 0;
+}
+}
+
+.menu__list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    @media (max-width: 768px){
+        flex-direction: column;
+        gap: 0;
+        margin: auto;
+    }
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    transition: color .5s;
+    &::before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        background-color: aqua;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5s;
+    }
+    &:hover {
+        &::before{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    @media (max-width: 768px){
+        display: block;
+        font-size: 30px;
+        line-height: 70px;
+    }
+}
