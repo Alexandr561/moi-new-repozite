@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rosario:wght@700&display=swap");
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: #555555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+* img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --bg-color: #121b25;
+  --accent-color: #1aa090;
+  --text-color: #d6d6d6;
+}
+
+[class*=__container] {
+  max-width: 1240px;
+  margin: 0px auto;
+}
+
+.btn {
+  /* сброс стилей для кнопок */
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input {
+  /* сброс стилей для input */
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+.inner__title {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 90px;
+  color: #222222;
+  font-family: "Rosario", sans-serif;
+}
+
+.inner__text {
+  font-family: "Rosario", sans-serif;
+  line-height: 30px;
+  color: #555555;
+}
+
+.header {
+  padding: 50px 0 43px 0;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+}
+
+.header-block {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.menu-link {
+  line-height: 24px;
+  color: #222222;
+}
+
+.header-logo {
+  display: block;
+  width: 57px;
+}
+
+.header__form {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  width: 0;
+}
+
+.header-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #d4dbd8;
+  background-image: url(../img/header/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.cart {
+  width: 40px;
+  height: 40px;
+  background-color: #d4dbd8;
+  background-image: url(../img/header/cart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 32px 0 20px;
+  position: relative;
+}
+
+.cart::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #09A66D;
+  position: absolute;
+  top: 8px;
+  right: 13px;
+}
+
+.header-link {
+  width: clamp(6.25rem, 4.886rem + 6.82vw, 10rem);
+  padding: 10px 0;
+  background-color: #09A66D;
+  color: #fff;
+  line-height: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.hero {
+  background-color: #F3FBF8;
+  position: relative;
+}
+
+.hero__wrapper {
+  background-image: url(../img/hero/fresh-melientha.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 93px 0 33px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hero__text {
+  max-width: 637px;
+  margin: 0 auto 59px auto;
+  text-align: center;
+}
+
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__img {
+  position: relative;
+  width: 863px;
+}
+
+.hero__link {
+  position: absolute;
+  top: -18px;
+  right: 20%;
+  width: 176px;
+  height: 64px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #222222;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero__link::after {
+  content: "";
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #09A66D url(../img/hero/arrow-right.svg) no-repeat center;
+}
+
+.hero__list {
+  width: 250px;
+}
+
+.hero__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.hero__item {
+  padding: 17px 33px 17px 113px;
+  font-size: 48px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.hero__item span {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.users {
+  background-color: #fff;
+  background-image: url(../img/hero/svg-1.svg);
+  background-repeat: no-repeat;
+  background-position: left 33px center;
+}
+
+.stars {
+  background-color: #fff;
+  background-image: url(../img/hero/svg-2.svg);
+  background-repeat: no-repeat;
+  background-position: left 33px center;
+}
+
+.items {
+  background-color: #fff;
+  background-image: url(../img/hero/svg-3.svg);
+  background-repeat: no-repeat;
+  background-position: left 33px center;
+}/*# sourceMappingURL=style.css.map */
