@@ -1,3 +1,7 @@
 body {
     background-color: rgb(212, 22, 18);
 }
+
+p {
+    background-color: blue;
+}
