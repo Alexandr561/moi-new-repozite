@@ -11,7 +11,8 @@ body {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul {
@@ -34,7 +35,7 @@ a {
   --text-color: #d6d6d6;
 }
 
-[class*=__container] {
+[class*="__container"] {
   max-width: 1240px;
   margin: 0px auto;
 }
@@ -74,18 +75,30 @@ input {
 }
 
 .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .header-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu-item:not(:last-child) {
@@ -103,8 +116,12 @@ input {
 }
 
 .header__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .search {
@@ -138,16 +155,16 @@ input {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #09A66D;
+  background-color: #09a66d;
   position: absolute;
   top: 8px;
   right: 13px;
 }
 
 .header-link {
-  width: clamp(6.25rem, 4.886rem + 6.82vw, 10rem);
+  max-width: 160px;
   padding: 10px 0;
-  background-color: #09A66D;
+  background-color: #09a66d;
   color: #fff;
   line-height: 20px;
   border-radius: 8px;
@@ -155,7 +172,7 @@ input {
 }
 
 .hero {
-  background-color: #F3FBF8;
+  background-color: #f3fbf8;
   position: relative;
 }
 
@@ -180,9 +197,15 @@ input {
 }
 
 .hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero__img {
@@ -201,9 +224,13 @@ input {
   line-height: 30px;
   text-align: center;
   color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero__link::after {
@@ -211,7 +238,7 @@ input {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: #09A66D url(../img/hero/arrow-right.svg) no-repeat center;
+  background: #09a66d url(../img/hero/arrow-right.svg) no-repeat center;
 }
 
 .hero__list {
@@ -254,4 +281,78 @@ input {
   background-image: url(../img/hero/svg-3.svg);
   background-repeat: no-repeat;
   background-position: left 33px center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.service {
+  padding: 141px 0 166px 0;
+}
+
+.service__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.service__content {
+  width: 670px;
+}
+
+.service__img {
+  width: 569px;
+}
+
+.service__title {
+  margin-bottom: 20px;
+}
+
+.service__text {
+  margin-bottom: 16px;
+}
+
+.services__item {
+  width: 500px;
+  background-color: #d0f6e8;
+  position: relative;
+  padding: 40px 59px 40px 163px;
+}
+
+.services__item::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #04291b29;
+  top: 50%;
+  left: 59px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.icon-bike {
+  background: url(../img/service/delivery-bike.svg) no-repeat center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 80px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+/*# sourceMappingURL=style.css.map */
