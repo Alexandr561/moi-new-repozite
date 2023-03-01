@@ -286,10 +286,25 @@ input {
 
 .service__content {
   width: 670px;
+  position: relative;
+  align-items: center;
 }
 
 .service__img {
   width: 569px;
+  height: 569px;
+  background: url(../img/service/elips-fruit.png),
+    url(../img/service/Ellipse2-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom 76px center, right 0 center;
+  background-size: 398px;
+  display: flex;
+  justify-content: center;
+  padding: 31px;
+}
+
+.service__img figure {
+  width: 354px;
 }
 
 .service__title {
@@ -302,9 +317,20 @@ input {
 
 .services__item {
   width: 500px;
-  background-color: #d0f6e8;
+  background-color: white;
   position: relative;
   padding: 40px 59px 40px 163px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+
+.services__item:hover {
+  background-color: #d0f6e8;
 }
 
 .services__item::before {
@@ -316,11 +342,30 @@ input {
   top: 50%;
   left: 59px;
   transform: translateY(-50%);
-  border-radius:50% ;
-  -webkit-border-radius:50% ;
-  -moz-border-radius:50% ;
-  -ms-border-radius:50% ;
-  -o-border-radius:50% ;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.services__item:hover::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: white;
+  top: 50%;
+  left: 59px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -328,13 +373,74 @@ input {
 }
 
 .icon-bike {
-    background: url(../img/service/delivery-bike.svg) no-repeat center;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 80px;
-    transform: translateY(-50%);
+  background: url(../img/service/delivery-bike.svg) no-repeat center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
 }
+
+.icon-shopping {
+  background: url(../img/service/shopping.svg) no-repeat center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+}
+
+.icon-time {
+  background: url(../img/service/fast-time.svg) no-repeat center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+}
+
+.sercvice__item-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.service__item-text {
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+}
+
+.arrow-service {
+  position: absolute;
+  bottom: 0;
+  left: 34%;
+  width: 17px;
+  height: 35px;
+  display: block;
+  background: url(../img/service/arrow-down.svg) center no-repeat;
+  animation: move 2s linear infinite;
+  -webkit-animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    border-bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
 // ________________________///SERVICE_________________________________________
