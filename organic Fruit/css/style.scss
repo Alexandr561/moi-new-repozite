@@ -155,7 +155,7 @@ input {
 
 .header-link {
   max-width: 160px;
-  padding: 10px 0;
+  padding: 10px 10px;
   background-color: #09a66d;
   color: #fff;
   line-height: 20px;
@@ -292,15 +292,16 @@ input {
 
 .service__img {
   width: 569px;
-  height: 569px;
+  height: 750px;
   background: url(../img/service/elips-fruit.png),
     url(../img/service/Ellipse2-bg.png);
   background-repeat: no-repeat;
-  background-position: bottom 76px center, right 0 center;
+  background-position: bottom 82px center, right 0px bottom 1px;
   background-size: 398px;
   display: flex;
   justify-content: center;
   padding: 31px;
+  align-items: center;
 }
 
 .service__img figure {
@@ -431,9 +432,38 @@ input {
   -webkit-animation: move 2s linear infinite;
 }
 
+.service__img img {
+  animation: moveman 2s linear infinite;
+  -webkit-animation: moveman 2s linear infinite;
+}
+
+@keyframes moveman {
+  0% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+}
+
 @keyframes move {
   0% {
-    border-bottom: 0;
+    bottom: 0;
   }
   50% {
     bottom: 10px;
@@ -443,4 +473,77 @@ input {
   }
 }
 
-// ________________________///SERVICE_________________________________________
+// ________________________//SERVICE_________________________________________
+
+//________________________vegetable_________________________________________
+
+.vegetable {
+  background-color: #f3fbf8;
+ 
+}
+
+.vegetable__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 55px;
+}
+
+.vegetable__img {
+  width: 600px;
+}
+
+.vegetable__content {
+  width: 568px;
+  position: relative;
+}
+
+.vegetable__title {
+  padding: 50px 0 50px 0;
+}
+
+.vegetable__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  padding-bottom: 50px;
+  color: #555555;
+  font-family: 'DM Sans';
+}
+
+.vegetable__link {
+  position: absolute;
+  
+  width: 180px;
+  height: 64px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+.vegetable__link::after {
+  content: "";
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #09a66d url(../img/hero/arrow-right.svg) no-repeat center;
+}
+
+.wrapper__veget {
+  padding: 50px 0 180px 0;
+  background: url(../img/section__vegetable/fresh-melientha-suavis.png);
+  background-repeat: no-repeat;
+  background-size: 410px;
+  background-position: right 50px bottom 0;
+}
+// ________________________///vegetable_________________________________________
